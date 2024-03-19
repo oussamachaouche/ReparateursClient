@@ -1,3 +1,6 @@
+//const baseUrl = 'http://localhost:1337';
+const baseUrl = 'https://reparateurs.onrender.com';
+
 function login() {
     const identifier = document.getElementById('identifier').value;
     const password = document.getElementById('password').value;
@@ -7,7 +10,7 @@ function login() {
         password: password
     };
 
-    fetch('http://localhost:1337/api/auth/local/', {
+    fetch(`${baseUrl}/api/auth/local/`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

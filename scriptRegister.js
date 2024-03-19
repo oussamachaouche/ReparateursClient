@@ -1,3 +1,5 @@
+//const baseUrl = 'http://localhost:1337';
+const baseUrl = 'https://reparateurs.onrender.com';
 function registerUser() {
     const username = document.getElementById('username').value;
     const email = document.getElementById('email').value;
@@ -9,7 +11,7 @@ function registerUser() {
         password: password
     };
 
-    fetch('http://localhost:1337/api/auth/local/register', {
+    fetch(`${baseUrl}/api/auth/local/register`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
