@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ajouter Réparateur</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <nav class="navbar">
+    <ul>
+        <li><a href="reparateur.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+    </ul>
+</nav>
+
+  <div class="div-btn-toggle">
+    <button id="toggleBtn" class="toggleBtn">Ajoutez un réparateur</button>
+  </div>
+  
+ 
+
+  <div class="panel" id="panel">    
+
+
+
+  <form id="reparateurForm">
+    <div class = "mainForm">
+
+      <div>
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom" required><br><br>
+        <label for="preNom">PréNom:</label>
+        <input type="text" id="preNom" name="preNom" required><br><br>
+        <label for="raisonsociale">Raison Sociale:</label>
+        <input type="text" id="raisonsociale" name="raisonsociale" required><br><br>
+        <label for="codePrestataire">Code Prestataire:</label>
+        <input type="text" id="codePrestataire" name="codePrestataire" required><br><br>
+       
+      </div>
+
+    <div class="wilaya">
+      <label for="wilayas"  name="wilayas">Wilaya :</label>
+      <select id="wilayas"></select><br><br>
+      <label for="communnes">Communes :</label>
+      <select id="communnes" name="communnes"></select><br><br>
+      <label for="adresseGarage">Adresse du garage:</label>
+      <input type="text" id="adresseGarage" name="adresseGarage" required><br><br>
+      <label for="telephone">Téléphone:</label>
+      <input type="text" id="telephone" name="telephone" required><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+    </div>
+
+    <div>
+      <label for="NIF">NIF:</label>
+      <input type="text" id="NIF" name="NIF" required><br><br>
+      <label for="RIB">RIB:</label>
+      <input type="text" id="RIB" name="RIB" required><br><br>
+      <label for="regimeFiscal">Régime Fiscal:</label>
+      <input type="text" id="regimeFiscal" name="regimeFiscal" required><br><br>
+      <label for="dureeMaximalReponse">Durée Maximale de Réponse (en jours):</label>
+      <input type="number" id="dureeMaximalReponse" name="dureeMaximalReponse" required><br><br>
+      <label for="NumeroRegistreComerce">Numéro de Registre du Commerce:</label>
+      <input type="text" id="NumeroRegistreComerce" name="NumeroRegistreComerce" required><br><br>
+      
+    </div>
+    <div>      <label for="Ristourne">Ristourne:</label>
+      <select id="Ristourne" name="Ristourne" required>
+        <option value="Oui">Oui</option>
+        <option value="Non">Non</option>
+      </select><br><br>
+      <label for="Taux">Taux de Ristourne:</label>
+      <input type="text" id="Taux" name="Taux" required><br><br>
+      <label for="modeDePaiement">Mode de Paiement:</label>
+      <input type="text" id="modeDePaiement" name="modeDePaiement" required><br><br>
+      <label for="Etat">État:</label>
+      <select id="Etat" name="Etat" required>
+        <option value="Active">Active</option>
+        <option value="Inactive">Inactive</option>
+      </select><br><br></div>
+  
+
+    </div>
+   <div class="div-btn">
+    <button type="button"  id="ajouterReparateurBtn" class ="btn-add" onclick="ajouterReparateur()">Ajouter Réparateur</button>
+   </div>
+   
+  </form>
+  </div>
+
+
+
+  <div class="div-btn-toggle">
+    <button id="toggleBtnFiltre" class="toggleBtn">Ajoutez un filtre</button>
+  </div>
+  
+  <div class="filterForm" id="filterForm">
+    <label for="codePrestataire">Code Prestataire:</label>
+    <input type="text" id="codePrestataireFiltrer" name="codePrestataireFiltrer">
+    <button type="button" id="filterButton">Appliquer le filtre</button>
+  </div>
+
+  <br><br>
+  <div class="div-table">
+    <table id="reparateursTable">
+      <thead>
+        <tr>
+          <th>Login</th>
+          <th>Nom</th>
+          <th>Prenom</th>
+          <th>Raison Sociale</th>
+          <th>Code Prestataire</th>
+          <th>Téléphone</th>
+          <th>Email</th>
+          <th>Wilaya</th>
+          <th>Commune</th>
+          <th>adresse de garage</th>
+          <th>NIF</th>
+          <th>RIB</th>
+          <th>Durée Max. de Réponse</th>
+          <th>Numéro Registre Commerce</th>
+          <th>Régime Fiscal</th>
+          <th>Ristourne</th>
+          <th>Taux</th>
+          <th>Mode de Paiement</th>
+          <th>État</th>
+          <th>Action</th> 
+        </tr>
+      </thead>
+      <tbody id="apiTableBody">
+        <!-- Les données seront ajoutées ici dynamiquement -->
+    </tbody>
+    </table>
+  </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

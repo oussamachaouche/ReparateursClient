@@ -1,0 +1,247 @@
+ .container {
+    /* max-width: 600px; */
+
+    margin: 0 auto;
+    padding: 5px;
+    padding-top: 0px;
+
+  } 
+  
+  label {
+    display: block;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+  }
+
+ 
+  /* button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }  */
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 13px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+
+  .mainForm {
+    display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 80px;
+   
+}
+.panel-container {
+  position: relative;
+}
+.panel {
+  display: none;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  margin-top: 0px;
+}
+.panel.active {
+  display: block;
+}
+.toggleBtn {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+} 
+
+
+.div-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.btn-add:hover {
+  background-color: #45a049; /* Couleur de fond au survol */
+}
+.btn-add{
+  background-color: #4CAF50; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 10px 20px; /* Espacement interne */
+  border: none;
+  border-radius: 5px; /* Bordures arrondies */
+  cursor: pointer; /* Curseur de souris */
+  font-size: 16px; /* Taille de la police */
+  transition-duration: 0.4s; /* Durée de transition */
+  width: 30%;
+}
+.btn-edited{
+  margin: 30px;
+}
+
+.div-table{
+  max-width: 200px;
+}
+
+
+.btn-supprimer {
+  width: 40px; /* Largeur du bouton */
+  height: 40px; /* Hauteur du bouton */
+  border-radius: 50%; /* Rendre le bouton circulaire */
+  background-color: #e4c8cb; /* Couleur de fond */
+  color: #ec1616; /* Couleur du texte */
+  border: none; /* Supprimer la bordure */
+  cursor: pointer; /* Curseur au survol */
+  display: flex; /* Permet de centrer le contenu */
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  font-size: 19px;
+  font-weight: bold;
+  text-decoration: none; /* Supprimer le soulignement du texte */
+}
+
+.btn-supprimer:hover {
+  background-color: #ca8d93; /* Couleur de fond au survol */
+}
+
+.div-actions {
+  display: flex; /* Utiliser Flexbox */
+  justify-content: space-between; /* Espacement égal entre les éléments */
+}
+
+.div-actions button {
+  flex-grow: 1; /* Permettre à chaque bouton de prendre autant d'espace que possible */
+  margin: 0 5px; /* Ajouter une marge de 5px autour des boutons */
+}
+
+.btn-editer{
+  width: 40px; /* Largeur du bouton */
+  height: 40px; /* Hauteur du bouton */
+  border: 2px solid #007bff; /* Bordure */
+  border-radius: 50%; /* Rendre le bouton circulaire */
+  background-color: #fff; /* Couleur de fond */
+  color: #007bff; /* Couleur de l'icône */
+  font-size: 24px; /* Taille de l'icône */
+  cursor: pointer; /* Curseur au survol */
+  display: flex; /* Alignement du contenu */
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+}
+
+.btn-editer:hover {
+  background-color: #007bff; /* Couleur de fond au survol */
+  color: #fff; /* Couleur de l'icône au survol */
+}
+
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding-bottom: 0px;
+}
+
+.navbar ul li {
+  float: left;
+}
+
+.navbar ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar ul li a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.filterForm {
+  display: none;
+
+}
+
+.filterForm.active {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrer horizontalement */
+  text-align: center; /* Centrer le texte à l'intérieur */
+}
+.filterForm label,
+.filterForm input,
+.filterForm button {
+  margin-right: 10px;
+}
+
+.filterForm input {
+  width: 100px; /* Largeur personnalisée pour l'input */
+}
+
+.filterForm label {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.filterForm input[type="text"] {
+  width: 150px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none; /* Supprimer la bordure bleue sur le focus */
+}
+
+.filterForm button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transition fluide */
+}
+
+.filterForm button:hover {
+  background-color: #0056b3; /* Changement de couleur au survol */
+}
+
+.form-container {
+  border: 2px solid #ccc;
+  background-color: lightblue;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+}
