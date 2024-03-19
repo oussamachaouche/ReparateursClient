@@ -25,7 +25,7 @@ function login() {
         // Save JWT token to localStorage
         localStorage.setItem('token', data.jwt);
         // Redirect user to dashboard or any other authenticated page
-        window.location.href = 'reparateur.html';
+        window.location.href = 'index.html';
     })
     .catch(error => {
         document.getElementById('message').innerText = 'Login failed. Please try again.';
